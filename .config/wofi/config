@@ -1,0 +1,9 @@
+lways_parse_args=true
+term=st-green
+allow_images=true
+hide_scroll=true
+insensitive=true
+prompt=
+height=40%
+width=20%
+single_click=true
