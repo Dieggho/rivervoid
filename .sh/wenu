@@ -1,0 +1,22 @@
+#!/bin/sh
+
+entries=" File\n DeadBeef\n Telegram\n Firefox\n Leafpad\n Calculator\n Terminal"
+
+selected=$(echo $entries|wofi -x 0 --width 240 --height 290 --dmenu --cache-file /dev/null | awk '{print tolower($2)}')
+
+case $selected in
+  file)
+    pcmanfm;;
+  deadbeef)
+    chtag 1; deadbeef;;
+  telegram)
+    chtag 1; Telegram;;
+  firefox)
+    chtag 2; firefox-wayland;;
+  leafpad)
+    chtag 4; leafpad;;
+  calculator)
+    galculator;;
+  terminal)
+    chtag 5; foot;;
+esac

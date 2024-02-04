@@ -1,0 +1,2 @@
+#!/bin/sh
+pgrep -U $USER | xargs kill -9

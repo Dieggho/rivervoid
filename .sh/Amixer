@@ -1,0 +1,2 @@
+#!/bin/sh
+st-green -c SmartTerm -t Amixer -e alsamixer

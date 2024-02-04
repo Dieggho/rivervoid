@@ -1,0 +1,7 @@
+#!/bin/sh
+cd $( dirname "$@")
+st-green \
+-c SmartTerm \
+-n Smart-Terminal \
+-t '' \
+-e tar xvf "$@"

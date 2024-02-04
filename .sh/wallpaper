@@ -1,0 +1,4 @@
+#!/bin/sh
+sleep 0.1
+chtag 6
+sxiv -t -r -o ~/.local/share/backgrounds/* | xargs SetAsWallpaper

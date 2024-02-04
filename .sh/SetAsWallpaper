@@ -1,0 +1,10 @@
+#!/usr/bin/dash
+
+pkill wbg
+
+cat <<EOF > /home/void/.waybg
+#!/usr/bin/dash
+wbg "$@"
+EOF
+
+wbg "$@"

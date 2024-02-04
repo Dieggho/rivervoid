@@ -1,0 +1,3 @@
+#!/usr/bin/dash
+chtag 6
+gimp "$@"

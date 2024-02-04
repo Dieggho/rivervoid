@@ -1,0 +1,18 @@
+#!/bin/sh
+
+entries=" Logout\n⏾ Suspend\n Lock\n Reboot\n⏻ Shutdown"
+
+selected=$(echo $entries|wofi -x 1670 --width 220 --height 230 --dmenu --cache-file /dev/null | awk '{print tolower($2)}')
+
+case $selected in
+  logout)
+    pgrep -U $USER | xargs kill -9;;
+  suspend)
+    exec doas -n zzz;;
+  lock)
+    exec doas -n zzz & swaylock -c 000000;;
+  reboot)
+    exec doas -n reboot;;
+  shutdown)
+    exec doas -n poweroff;;
+esac

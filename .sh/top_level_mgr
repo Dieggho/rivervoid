@@ -1,0 +1,22 @@
+#!/bin/sh
+
+entries="Main 1\nWeb 2\nNet 3\nDoc 4\nTerm 5\nMedia 6\nDesk 7"
+
+selected=$(echo $entries|wofi -x 480 --width 240 --height 290 --dmenu --cache-file /dev/null | awk '{print tolower($2)}')
+
+case $selected in
+  1)
+    riverctl set-view-tags $((1 << (1 - 1)));;
+  2)
+    riverctl set-view-tags $((1 << (2 - 1)));;
+  3)
+    riverctl set-view-tags $((1 << (3 - 1)));;
+  4)
+    riverctl set-view-tags $((1 << (4 - 1)));;
+  5)
+    riverctl set-view-tags $((1 << (5 - 1)));;
+  6)
+    riverctl set-view-tags $((1 << (6 - 1)));;
+  7)
+    riverctl set-view-tags $((1 << (7 - 1)));;
+esac
