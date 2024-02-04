@@ -1,0 +1,54 @@
+export red=$'\e[0;31m'
+export RED=$'\e[1;31m'
+export green=$'\e[0;32m'
+export GREEN=$'\e[1;32m'
+export blue=$'\e[0;34m'
+export BLUE=$'\e[1;34m'
+export purple=$'\e[0;35m'
+export PURPLE=$'\e[1;35m'
+export cyan=$'\e[0;36m'
+export CYAN=$'\e[1;36m'
+export white=$'\e[0;37m'
+export WHITE=$'\e[1;37m'
+export yellow=$'\e[0;33m'
+export YELLOW=$'\e[01;33m'
+export NC=$'\e[0m'
+
+#PS1=$'$WHITE=>$NC ' 
+
+bind ^[a=beginning-of-line
+bind ^[e=end-of-line
+bind ^L=clear-screen
+
+alias \
+ blackterm="sed -i s/st-green/st/ ~/.sh/*erminal" \
+ greenterm="sed -i s/st/st-green/ ~/.sh/*erminal" \
+ rt="doas -s" \
+ ls='ls --color=auto' \
+ xi="doas xbps-install -S" \
+ xu="doas xbps-install -Su" \
+ xs="xbps-query -Rs" \
+ xinf="xbps-query -S" \
+ xo="xbps-query -O" \
+ xr="doas xbps-remove -R" \
+ xro="doas xbps-remove -ROoy" \
+ xl="xbps-query -l" \
+ xm="xbps-query -m" \
+ xc="xbps-query -l | wc -l" \
+ xrec="doas xbps-reconfigure -fa" \
+ xclass="xprop | grep CLASS" \
+ kls="doas vkpurge list" \
+ krm="doas vkpurge rm all" \
+ vidoas="doas vi /etc/doas.conf" \
+ shrc="vi ~/.mkshrc" \
+ myip="curl ident.me;echo" \
+ weather="curl -4 http://wttr.in/Sao-Paulo" \
+ myvoid="clear; neofetch ; xbps-install --version; echo; lsblk /dev/nvme0n1;" \
+ poweroff="doas -n poweroff" \
+ reboot="doas -n reboot" \
+ zzz="doas -n zzz"
+
+lss () {
+        du -hc "$1" | sort -rh | head -20
+}
+# neofetch ; xbps-install --version; echo; lsblk /dev/nvme0n1
