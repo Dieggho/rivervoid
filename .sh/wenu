@@ -18,5 +18,5 @@ case $selected in
   calculator)
     galculator;;
   terminal)
-    chtag 5; foot;;
+    foot;;
 esac
