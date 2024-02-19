@@ -48,9 +48,8 @@
      "on-scroll-up": "riverctl focus-view previous",
      "on-scroll-down": "riverctl focus-view next",
      "on-click": "top_level_mgr",
-     "on-click-right": "top_level_mgr",
+     "on-click-right": "move_top_level_to",
      "max-length": 200,
-     "on-click-right": "pkill wofi",
      },
 
      // "network": {
