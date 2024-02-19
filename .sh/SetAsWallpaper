@@ -4,7 +4,9 @@ pkill wbg
 
 cat <<EOF > /home/void/.waybg
 #!/bin/sh
-wbg "$@"
+wbg "$@" &
 EOF
 
 wbg "$@" &
+
+notify-send "Wallpaper has been set" "'$@' is now your wallpaper" -t 2000
