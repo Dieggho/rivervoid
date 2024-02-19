@@ -2,23 +2,17 @@
 
 pkill wofi
 
-entries=" Main\n Web\n Net\n Doc\n Term\n Media\n Desk"
+entries=" Move-Up\n Move-Down\n Toggle-Float\n Close"
 
-selected=$(echo $entries|wofi -x 500 --width 240 --height 290 --dmenu --cache-file /dev/null --prompt="Move Toplevel To Tag.."| awk '{print tolower($2)}')
+selected=$(echo $entries|wofi -x 500 --width 240 --height 190 --dmenu --cache-file /dev/null --prompt="Toplevel Manager"| awk '{print tolower($2)}')
 
 case $selected in
-main)
-    riverctl set-view-tags $((1 << (1 - 1)));;
-web)
-    riverctl set-view-tags $((1 << (2 - 1)));;
-net)
-    riverctl set-view-tags $((1 << (3 - 1)));;
-doc)
-    riverctl set-view-tags $((1 << (4 - 1)));;
-term)
-    riverctl set-view-tags $((1 << (5 - 1)));;
-media)
-    riverctl set-view-tags $((1 << (6 - 1)));;
-desk)
-    riverctl set-view-tags $((1 << (7 - 1)));;
+move-up)
+    riverctl swap previous;;
+move-down)
+    riverctl swap next;;
+toggle-float)
+    riverctl toggle-float;;
+close)
+    riverctl close;;
 esac
