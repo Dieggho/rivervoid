@@ -1,2 +1,2 @@
-#!/usr/bin/dash
-wbg "/home/void/Pictures/Backgrounds/71.jpg"
+#!/bin/sh
+wbg "/home/void/.local/share/backgrounds/river_woods.png" &
