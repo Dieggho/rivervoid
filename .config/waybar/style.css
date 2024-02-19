@@ -184,7 +184,6 @@ window#waybar.empty #window {
      margin: 3px 3px 3px 3px;
      border-radius: 90px;
      background-clip: padding-box;
-
  }
 
 #battery,
@@ -224,6 +223,27 @@ window#waybar.empty #window {
     color: #dddddd; 
 }
 
+#custom-closebutton{
+    border-bottom: 2px solid @colgreen;
+    color: @colgreen;
+    background-color: @colbg2;
+    padding: 0.01 5px;
+    border-radius: 90px;
+    margin: 3px 3px 3px 3px;
+    background-clip: padding-box;
+}
+
+#custom-floatbutton{
+    border-bottom: 2px solid @colgreen;
+    color: @colgreen;
+    background-color: @colbg2;
+    padding: 0.01 5px;
+    border-radius: 90px;
+    margin: 3px 3px 3px 3px;
+    background-clip: padding-box;
+}
+
+
 #custom-menu{
     background-color: @colbg2;
     border-bottom: 2px solid @colgreen;
@@ -238,11 +258,11 @@ window#waybar.empty #window {
     color: @colfg;
 }
 
-
-#custom-rivertile{
-     background: @colbg2; 
+#mode {
+     background: @colbg2;
+     color: @colgreen;
      padding: 0 10px;
      margin: 3px 3px 3px 3px;
      border-radius: 90px;
-     color: @colgreen;
+     background-clip: padding-box;
 }

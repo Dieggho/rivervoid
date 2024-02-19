@@ -2,8 +2,9 @@
     "spacing": 4,
 		// try to keep it 4px across the config
 		"height":25,
-    "modules-left": ["custom/menu","river/tags", "custom/rivertile", "river/window"],
-    "modules-right": ["network", "cpu", "memory", "battery", "battery#bat1", "network#net1", "custom/alsa", "clock", "custom/session"],
+    "layer": "top",
+    "modules-left": ["custom/menu", "river/tags", "river/mode", "river/window"],
+    "modules-right": ["cpu", "memory", "battery", "battery#bat1", "network#net1", "custom/alsa", "clock", "custom/session"],
     "battery": {
         "format": "{icon} {capacity}% ",
 	"interval": 10,
@@ -13,7 +14,8 @@
         "format": "        ",
         "tooltip": false,
         "on-click": "/home/void/.sh/wenu",
-        "on-click-middle": "foot",
+        "on-click-middle": "/home/void/.sh/Terminal",
+        "on-click-right": "pkill wofi",
     },
 
     "river/tags": {
@@ -21,14 +23,25 @@
 	"tag-labels": ["  Main  ","  Web  ","  Net  ","  Doc  ","  Term  ","  Media  ","  Desk  "], 
      },
 
-     "custom/rivertile": {
-     "format": "  ",
+
+     "river/mode": {
+     "format": " {} ",
      "on-scroll-up": "riverctl swap previous",
      "on-scroll-down": "riverctl swap next",
      "on-click-middle": "riverctl toggle-float",
-     "on-click-right": "riverctl enter-mode normal",
-     "on-click": "riverctl enter-mode float",
+     "on-click-right": "riverctl enter-mode grab",
+     "on-click": "riverctl enter-mode normal",
      },
+
+     //"custom/closebutton": {
+     //"format": "",
+     //"on-click": "riverctl close",
+     //},
+
+     //"custom/floatbutton": {
+     //"format": "",
+     //"on-click": "riverctl toggle-float",
+     //},
 
      "river/window":{
      "on-click-middle": "riverctl close",
@@ -37,29 +50,30 @@
      "on-click": "top_level_mgr",
      "on-click-right": "top_level_mgr",
      "max-length": 200,
+     "on-click-right": "pkill wofi",
      },
 
-     "network": {
+     // "network": {
      // "interface": "wlp2s0",
-     "format": "{ifname}",
-     "format-wifi": " {bandwidthDownBytes}    {bandwidthUpBytes}",
-     "max-length": 50,
-     "interval": 1,
-     },
+     // "format": "{ifname}",
+     // "format-wifi": " {bandwidthDownBytes}    {bandwidthUpBytes}",
+     // "max-length": 50,
+     // "interval": 1,
+     // },
 
      "network#net1": {
      // "interface": "wlp2s0",
      "format": "{ifname}",
      "format-wifi": " {signalStrength}%",
-     "format-ethernet": "󰈁 {ifname} ",
+     "format-ethernet": " {ifname} ",
      "format-disconnected": "", //An empty format will hide the module.
      "format-disconnected": "",
      "tooltip-format": "{ifname}",
      "tooltip-format-wifi": "  {essid} ({signalStrength}%)  ",
-     "tooltip-format-ethernet": "󰈁 {ifname} ",
+     "tooltip-format-ethernet": " {ifname} ",
      "tooltip-format-disconnected": "Disconnected",
      "max-length": 50,
-     "interval": 10,
+     "interval": 1,
      "on-click": "wpa_gui"
      },
 
@@ -67,27 +81,32 @@
         // "timezone": "America/Sao_Paulo",
         "tooltip-format": "<big>[{:%Y %B}]</big>\n<tt><small>{calendar}</small></tt>",
         "format": " {:%H:%M}",
-        "format-alt": " {:%d/%m/%Y}"
+        "format-alt": " {:%d/%m/%Y}",
+	"interval": 1,
     },
 
     "cpu": {
         "format": " {usage}%",
-        "tooltip": false
+        "tooltip": false,
+	"interval": 1,
     },
 
     "memory": {
         "format": " {percentage}%",
-        "on-click": "lxtask"
+        "on-click": "lxtask",
+	"interval": 1,
     },
 
     "battery": {
 	"bat": "BAT0",
         "format": " {capacity}%",
+	"interval": 1,
     },
 
     "battery#bat1": {
 	"bat": "BAT1",
         "format": " {capacity}%",
+	"interval": 1,
     },
 
     "custom/alsa": {
@@ -96,7 +115,7 @@
         "on-scroll-up": "amixer set Master 1+; pkill -x -RTMIN+11 waybar",
         "on-scroll-down": "amixer set Master 1-; pkill -x -RTMIN+11 waybar",
         "signal": 11,
-        "interval": 10,
+        "interval": 1,
         "tooltip": false
     },
 
@@ -104,5 +123,6 @@
         "format": "  ⏻  ",
         "tooltip": false,
         "on-click": "/home/void/.sh/wsession",
+        "on-click-right": "pkill wofi",
     },
 }
