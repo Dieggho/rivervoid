@@ -1,8 +1,10 @@
 #!/bin/sh
 
+pkill wofi
+
 entries="Main 1\nWeb 2\nNet 3\nDoc 4\nTerm 5\nMedia 6\nDesk 7"
 
-selected=$(echo $entries|wofi -x 480 --width 240 --height 290 --dmenu --cache-file /dev/null | awk '{print tolower($2)}')
+selected=$(echo $entries|wofi -x 500 --width 240 --height 290 --dmenu --cache-file /dev/null --prompt="Move Toplevel To Tag.."| awk '{print tolower($2)}')
 
 case $selected in
   1)

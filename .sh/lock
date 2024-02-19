@@ -1,0 +1,2 @@
+#!/bin/sh
+doas -n zzz & waylock -init-color 0x000000 -input-color 0x22514B -fail-color 0x7A1F15

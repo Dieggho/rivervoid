@@ -1,14 +1,14 @@
 #!/bin/sh
+pkill wofi
+entries=" File\n VLC\n Telegram\n Firefox\n Leafpad\n Calculator\n Gucharmap\n Terminal"
 
-entries=" File\n DeadBeef\n Telegram\n Firefox\n Leafpad\n Calculator\n Terminal"
-
-selected=$(echo $entries|wofi -x 0 --width 240 --height 290 --dmenu --cache-file /dev/null | awk '{print tolower($2)}')
+selected=$(echo $entries|wofi -x 0 --width 240 --height 330 --dmenu --cache-file /dev/null --prompt=Applications | awk '{print tolower($2)}')
 
 case $selected in
   file)
     pcmanfm;;
-  deadbeef)
-    chtag 1; deadbeef;;
+  vlc)
+    chtag 1; VLC;;
   telegram)
     chtag 1; Telegram;;
   firefox)
@@ -17,6 +17,8 @@ case $selected in
     chtag 4; leafpad;;
   calculator)
     galculator;;
+  gucharmap)
+    chtag 4; gucharmap;;
   terminal)
-    foot;;
+    chtag 5; foot;;
 esac

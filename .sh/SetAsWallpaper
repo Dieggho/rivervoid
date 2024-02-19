@@ -3,8 +3,8 @@
 pkill wbg
 
 cat <<EOF > /home/void/.waybg
-#!/usr/bin/dash
+#!/bin/sh
 wbg "$@"
 EOF
 
-wbg "$@"
+wbg "$@" &

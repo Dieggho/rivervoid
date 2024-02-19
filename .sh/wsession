@@ -1,8 +1,8 @@
 #!/bin/sh
-
+pkill wofi
 entries=" Logout\n⏾ Suspend\n Lock\n Reboot\n⏻ Shutdown"
 
-selected=$(echo $entries|wofi -x 1670 --width 220 --height 230 --dmenu --cache-file /dev/null | awk '{print tolower($2)}')
+selected=$(echo $entries|wofi -x 1710 --width 123 --height 225 --dmenu --cache-file /dev/null --prompt="Session Manager"| awk '{print tolower($2)}')
 
 case $selected in
   logout)
@@ -10,7 +10,7 @@ case $selected in
   suspend)
     exec doas -n zzz;;
   lock)
-    exec doas -n zzz & swaylock -c 000000;;
+    exec lock;;
   reboot)
     exec doas -n reboot;;
   shutdown)
