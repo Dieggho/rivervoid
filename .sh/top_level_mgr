@@ -2,23 +2,23 @@
 
 pkill wofi
 
-entries="Main 1\nWeb 2\nNet 3\nDoc 4\nTerm 5\nMedia 6\nDesk 7"
+entries=" Main\n Web\n Net\n Doc\n Term\n Media\n Desk"
 
 selected=$(echo $entries|wofi -x 500 --width 240 --height 290 --dmenu --cache-file /dev/null --prompt="Move Toplevel To Tag.."| awk '{print tolower($2)}')
 
 case $selected in
-  1)
+main)
     riverctl set-view-tags $((1 << (1 - 1)));;
-  2)
+web)
     riverctl set-view-tags $((1 << (2 - 1)));;
-  3)
+net)
     riverctl set-view-tags $((1 << (3 - 1)));;
-  4)
+doc)
     riverctl set-view-tags $((1 << (4 - 1)));;
-  5)
+term)
     riverctl set-view-tags $((1 << (5 - 1)));;
-  6)
+media)
     riverctl set-view-tags $((1 << (6 - 1)));;
-  7)
+desk)
     riverctl set-view-tags $((1 << (7 - 1)));;
 esac
