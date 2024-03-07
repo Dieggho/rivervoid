@@ -85,13 +85,13 @@
     },
 
     "cpu": {
-        "format": " {usage}%",
-        "tooltip": false,
+        "format": " {usage}%",
+        "on-click": "lxtask",
 	"interval": 1,
     },
 
     "memory": {
-        "format": " {percentage}%",
+        "format": " {percentage}%",
         "on-click": "lxtask",
 	"interval": 1,
     },
