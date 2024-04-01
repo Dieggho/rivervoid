@@ -227,7 +227,6 @@ window#waybar.empty #window {
     border-bottom: 2px solid @colgreen;
     color: @colgreen;
     background-color: @colbg2;
-    padding: 0.01 5px;
     border-radius: 90px;
     margin: 3px 3px 3px 3px;
     background-clip: padding-box;
@@ -237,7 +236,6 @@ window#waybar.empty #window {
     border-bottom: 2px solid @colgreen;
     color: @colgreen;
     background-color: @colbg2;
-    padding: 0.01 5px;
     border-radius: 90px;
     margin: 3px 3px 3px 3px;
     background-clip: padding-box;

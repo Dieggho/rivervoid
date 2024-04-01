@@ -1,9 +1,15 @@
 {
+    "output": ["eDP-1"],
     "spacing": 4,
 		// try to keep it 4px across the config
-		"height":25,
+    "height":25,
+    // "margin-left": 4,
+    // "margin-right": 4,
+    // "margin-top": 4,
+    // "margin-radius": 4,
     "layer": "top",
-    "modules-left": ["custom/menu", "river/tags", "river/mode", "river/window"],
+    "modules-left": ["custom/menu", "river/tags", "river/mode"],
+    "modules-center": ["river/window"],
     "modules-right": ["cpu", "memory", "battery", "battery#bat1", "network#net1", "custom/alsa", "clock", "custom/session"],
     "battery": {
         "format": "{icon} {capacity}% ",
