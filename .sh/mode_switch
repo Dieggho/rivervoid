@@ -2,9 +2,9 @@
 
 pkill wofi
 
-entries=" Normal\n Toggle-Float\n Grab"
+entries=" Normal\n Grab"
 
-selected=$(echo $entries|wofi -x 430 --width 240 --height 160 --dmenu --cache-file /dev/null --prompt="River Mode Switch"| awk '{print tolower($2)}')
+selected=$(echo $entries|wofi -x 430 --width 180 --height 125 --dmenu --cache-file /dev/null --prompt="River Mode Switch"| awk '{print tolower($2)}')
 
 case $selected in
 normal)
