@@ -1,0 +1,16 @@
+#!/bin/sh
+
+pkill wofi
+
+entries=" Normal\n Toggle-Float\n Grab"
+
+selected=$(echo $entries|wofi -x 430 --width 240 --height 160 --dmenu --cache-file /dev/null --prompt="Toplevel Manager"| awk '{print tolower($2)}')
+
+case $selected in
+normal)
+    riverctl enter-mode normal;;
+toggle-float)
+    riverctl toggle-float;;
+grab)
+    riverctl enter-mode grab;;
+esac
