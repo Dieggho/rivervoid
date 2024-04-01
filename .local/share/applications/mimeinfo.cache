@@ -1,0 +1,17 @@
+[MIME Cache]
+application/vnd.rar=userapp-Unrar-I21FG2.desktop;
+application/x-7z-compressed=userapp-un7z-SS3CG2.desktop;
+application/x-bittorrent=transmission-qt.desktop;
+application/x-compressed-tar=userapp-untar-NEEVG2.desktop;
+application/x-xz-compressed-tar=userapp-untar-JC0NG2.desktop;
+application/zip=userapp-Unzip-HR2CG2.desktop;
+audio/mpeg=userapp-VLC-U9UXI2.desktop;
+image/jpeg=userapp-SetAsWallpaper-EA55I2.desktop;userapp-View-LPTTI2.desktop;
+image/jpg=userapp-SetAsWallpaper-EA55I2.desktop;userapp-View-LPTTI2.desktop;
+image/png=Gimp.desktop;userapp-SetAsWallpaper-EA55I2.desktop;userapp-View-LPTTI2.desktop;
+image/webp=userapp-SetAsWallpaper-EA55I2.desktop;userapp-View-LPTTI2.desktop;
+inode/directory=userapp-VLC-U9UXI2.desktop;userapp-View-LPTTI2.desktop;userapp-xarch-UIU6F2.desktop;
+text/plain=Edit.desktop;
+video/mp4=Video.desktop;conv2mp3.desktop;
+x-scheme-handler/magnet=transmission-qt.desktop;
+x-scheme-handler/tg=org.telegram.desktop._9d76c378c28f4a4a56ace10e8ad97578.desktop;

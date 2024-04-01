@@ -1,0 +1,8 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Edit
+Exec=/home/void/.sh/Edit
+MimeType=text/plain
+Icon=leafpad
+Type=Application
+NoDisplay=true

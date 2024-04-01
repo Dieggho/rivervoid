@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=VLC
+Exec=VLC %f
+Categories=Other;
+NoDisplay=true
+MimeType=audio/mpeg;inode/directory
+Terminal=false
+Icon=vlc

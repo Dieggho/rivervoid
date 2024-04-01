@@ -1,0 +1,8 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=conv2mp3
+Exec=/home/void/.sh/conv2mp3
+MimeType=video/mp4
+Icon=/home/void/.icons/mp3con.png
+Type=Application
+NoDisplay=true
