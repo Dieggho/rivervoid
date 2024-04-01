@@ -1,2 +1,2 @@
 #!/bin/sh
-wmenu_path | wmenu "$@" | ${SHELL:-"/bin/sh"} &
+dmenu-wl_run -nb '#141a1b' -nf '#dddddd' -sb '#0C8B72' -sf '#dddddd' -p run 

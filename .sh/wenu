@@ -1,8 +1,8 @@
 #!/bin/sh
 pkill wofi
-entries=" File\n VLC\n Telegram\n Firefox\n Leafpad\n Calculator\n Gucharmap\n Wallpapers\n Terminal"
+entries=" File\n VLC\n Telegram\n Firefox\n Leafpad\n Calculator\n Gucharmap\n Gtk-Theme\n Wallpapers\n Terminal"
 
-selected=$(echo $entries|wofi -x 0 --width 240 --height 360 --dmenu --cache-file /dev/null --prompt=Applications | awk '{print tolower($2)}')
+selected=$(echo $entries|wofi -x 0 --width 240 --height 390 --dmenu --cache-file /dev/null --prompt=Applications | awk '{print tolower($2)}')
 
 case $selected in
   file)
@@ -19,6 +19,8 @@ case $selected in
     galculator;;
   gucharmap)
     chtag 4; gucharmap;;
+  gtk-theme)
+    chtag 7; nwg-look;;
   wallpapers)
     wallpaper;;
   terminal)

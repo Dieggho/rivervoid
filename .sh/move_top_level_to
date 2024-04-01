@@ -3,7 +3,7 @@ pkill wofi
 
 entries=" Main\n Web\n Net\n Doc\n Term\n Media\n Desk"
 
-selected=$(echo $entries|wofi -x 500 --width 240 --height 290 --dmenu --cache-file /dev/null --prompt="Move Toplevel To Tag.."| awk '{print tolower($2)}')
+selected=$(echo $entries|wofi -x 830 --width 240 --height 290 --dmenu --cache-file /dev/null --prompt="Move Toplevel To Tag.."| awk '{print tolower($2)}')
 
 case $selected in
 main)
