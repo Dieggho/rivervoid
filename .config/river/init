@@ -23,7 +23,7 @@ riverctl map normal Mod5 Return spawn "chtag 5;foot"
 
 riverctl map normal Mod5 B spawn "View /home/void/.local/share/backgrounds"
 
-riverctl map normal Mod5 P spawn "wmenu_run -n dddddd -N 141a1b -S 0C8B72 -s dddddd -M 22514b -m dddddd -f 14 -p run"
+riverctl map normal Mod5 P spawn "tofi-run"
 
 # Super+Q to close the focused view
 riverctl map normal Super Q close
